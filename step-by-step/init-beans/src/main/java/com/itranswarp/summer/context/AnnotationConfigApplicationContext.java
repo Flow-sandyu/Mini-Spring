@@ -106,7 +106,8 @@ public class AnnotationConfigApplicationContext {
     }
 
     /**
-     * 创建一个Bean，然后使用BeanPostProcessor处理，但不进行字段和方法级别的注入。如果创建的Bean不是Configuration或BeanPostProcessor，则在构造方法中注入的依赖Bean会自动创建。
+     * 创建一个 Bean，然后使用 BeanPostProcessor处理，但不进行字段和方法级别的注入。
+     * 如果创建的 Bean 不是 Configuration 或 BeanPostProcessor，则在构造方法中注入的依赖 Bean 会自动创建。
      */
     public Object createBeanAsEarlySingleton(BeanDefinition def) {
         logger.atDebug().log("Try create bean '{}' as early singleton: {}", def.getName(), def.getBeanClass().getName());
